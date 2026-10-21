@@ -6,7 +6,7 @@
 //  After deploying   : "https://your-backend-name.onrender.com"
 // ============================================================
 window.APP_CONFIG = {
-  API_BASE_URL: "http://127.0.0.1:2200",
+  API_BASE_URL: "http://127.0.0.1:8000",
   REQUEST_TIMEOUT_MS: 60000, // Render free tier can take ~50s to wake up
 };
 
