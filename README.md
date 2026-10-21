@@ -4,7 +4,7 @@
 
 A machine learning-powered web application that analyzes user-provided lifestyle, academic, and other relevant features to predict a mental health-related score. Built using Python, data science and machine learning libraries, FastAPI, Pydantic, and a custom HTML, CSS, and JavaScript frontend, with deployment on Render.
 
-🔗 **Live Demo:** [Try the Application](https://bheja-fry-ai-score-predictor-1.onrender.com/)  
+🔗 **Live Demo:** [Try the Application](https://bheja-fry-ai-score-predictor-1.onrender.com)  
 
 ---
 
