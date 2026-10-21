@@ -43,7 +43,7 @@ The project combines data analysis, visualization, model development, backend AP
 | Data Validation | Pydantic |
 | Frontend | HTML5, CSS3, JavaScript |
 | API Communication | REST API, JSON, Fetch API |
-| Model Persistence | Joblib / Pickle, depending on implementation |
+| Model Persistence | Joblib 
 | Deployment | Render |
 | Development Tools | Jupyter Notebook, VS Code, Git, GitHub |
 
