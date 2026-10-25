@@ -132,7 +132,6 @@ mental-health-score-predictor/
 └── README.md
 ```
 
-*This is a suggested structure. Adjust the filenames and directories to match your actual repository.*
 
 ## ⚙️ Installation and Setup
 
