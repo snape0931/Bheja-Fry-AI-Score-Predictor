@@ -176,23 +176,10 @@ python -m uvicorn main:app --reload
 
 Keep the terminal running while using the locally hosted application.
 
-### 🛠️ Troubleshooting
-
-- 📦 Verify that all required Python packages are installed.
-- 📁 Ensure `Mental_Health_Model.pkl` is available at the path expected by `main.py`.
-- 📊 Confirm that any required dataset or model files are present.
-- 🔌 Check the terminal output if the FastAPI server fails to start.
-- 🐍 Verify Python and dependency compatibility if installation errors occur.
-
-## ⚠️ Disclaimer
-
-This project is intended for **educational and machine learning demonstration purposes only**. Its predictions are dataset-based estimates and **are not medical diagnoses or a substitute for professional mental health assessment**. The output should not be used as the sole basis for health-related decisions.
 
 ## 👩‍💻 Author
 
 **Saumya Srivastava**
-
-🔗 [GitHub Profile](https://github.com/snape0931)
 
 🔗 [Project Repository](https://github.com/snape0931/Bheja-Fry-AI-Score-Predictor)
 
