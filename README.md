@@ -47,8 +47,6 @@ The project combines data analysis, visualization, model development, backend AP
 | Deployment | Render |
 | Development Tools | Jupyter Notebook, VS Code, Git, GitHub |
 
-*The listed metrics and libraries should be adjusted to match the ones actually used in the project.*
-
 ## 🔬 Machine Learning Workflow
 
 The project follows a typical end-to-end machine learning workflow.
