@@ -1,142 +1,201 @@
-# 🧠 Mental Health Score Predictor
+# 🧠 Bheja Fry AI — Mental Health Score Predictor
 
-### Decode Your Stress. Understand Your Signals.
+### 🧠 Decode Your Stress. Understand Your Signals.
 
-A machine learning-powered web application that analyzes user-provided lifestyle, academic, and other relevant features to predict a mental health-related score. Built using Python, data science and machine learning libraries, FastAPI, Pydantic, and a custom HTML, CSS, and JavaScript frontend, with deployment on Render.
+An end-to-end Machine Learning web application that analyzes student lifestyle and social media usage patterns to predict a mental health-related score. Built using Python, Scikit-learn, FastAPI, and a custom interactive frontend.
 
-🔗 **Live Demo:** [Try the Application](https://bheja-fry-ai-score-predictor-1.onrender.com)  
+🔗 **GitHub Repository:** [Bheja Fry AI — Score Predictor](https://github.com/snape0931/Bheja-Fry-AI-Score-Predictor)
+
+🚀 **Live Demo:** [Try the Application](https://bheja-fry-ai-score-predictor-1.onrender.com)
 
 ---
 
-## ✨ Overview
+## ✨ Features
 
-Mental well-being can be influenced by several interconnected factors, including lifestyle habits, academic pressure, sleep patterns, and daily routines.
-
-**Mental Health Score Predictor** is an end-to-end machine learning project that explores patterns in user-provided data and estimates a mental health-related score using a trained ML model.
-
-The project combines data analysis, visualization, model development, backend API engineering, input validation, and frontend development into a single deployable application.
-
-> ⚠️ **Disclaimer:** This application is an educational machine learning project. Its predictions are not medical diagnoses, do not replace professional mental health assessments, and should not be used as the sole basis for health-related decisions.
-
-## 🚀 Features
-
-- 🧠 **ML-Powered Prediction** — Generates a predicted score using a trained machine learning model.
-- 📊 **Exploratory Data Analysis** — Investigates distributions, relationships, correlations, and patterns in the dataset.
-- 📈 **Data Visualization** — Uses statistical plots and charts to communicate insights.
-- ⚡ **FastAPI Backend** — Exposes prediction functionality through REST API endpoints.
-- 🛡️ **Pydantic Validation** — Validates incoming data and enforces input schemas.
-- 🎨 **Interactive Web Interface** — Built using HTML, CSS, and JavaScript.
-- 🔄 **End-to-End ML Pipeline** — Connects preprocessing, inference, API handling, and frontend interaction.
+- 🧠 **ML-Powered Predictions** — Estimates a mental health-related score using a trained machine learning model.
+- 📊 **Exploratory Data Analysis** — Explores trends, distributions, correlations, and relationships in the dataset.
+- 📱 **Student-Centric Inputs** — Uses demographic, academic, and social media usage information.
+- ⚡ **FastAPI Backend** — Handles prediction requests through a REST API.
+- 🛡️ **Input Validation** — Uses Pydantic to validate incoming data.
+- 🎨 **Interactive Frontend** — Custom-designed interface with a purple, pink, and black theme.
+- 🔗 **Frontend–Backend Integration** — Connects the user interface to the ML model through API requests.
+- 📦 **Model Persistence** — Loads a saved machine learning model for inference.
 - ☁️ **Cloud Deployment** — Deployed on Render for online access.
-- 🧩 **Modular Architecture** — Separates frontend, backend, and machine learning logic for maintainability.
 
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
 |---|---|
 | Language | Python |
-| Data Manipulation | NumPy, Pandas |
-| Visualization | Matplotlib, Seaborn |
+| Data Analysis | NumPy, Pandas |
+| Data Visualization | Matplotlib, Seaborn |
 | Machine Learning | Scikit-learn |
-| Model Evaluation | Accuracy, Precision, Recall, F1-score, MAE, RMSE, as applicable to the task |
 | Backend | FastAPI, Uvicorn |
 | Data Validation | Pydantic |
+| Model Persistence | Joblib / Pickle |
 | Frontend | HTML5, CSS3, JavaScript |
 | API Communication | REST API, JSON, Fetch API |
-| Model Persistence | Joblib 
+| Development | Jupyter Notebook, VS Code |
+| Version Control | Git, GitHub |
 | Deployment | Render |
-| Development Tools | Jupyter Notebook, VS Code, Git, GitHub |
+
+## 📊 Dataset
+
+The project uses the **Student Social Media and Mental Health Impact** dataset to explore relationships between social media usage and student well-being.
+
+The dataset contains information relating to:
+
+- 👤 **Demographics:** Age, gender, and academic level.
+- 🌍 **Background:** Country and related demographic information.
+- 📱 **Social Media Usage:** Platforms used by students.
+- 🎯 **Usage Purpose:** Networking, education, entertainment, and news.
+
+The dataset is explored and processed to support model development and score prediction.
 
 ## 🔬 Machine Learning Workflow
 
-The project follows a typical end-to-end machine learning workflow.
-
-1. **Data Collection** — Load the dataset and inspect its features and target variable.
-2. **Data Cleaning** — Identify missing values, duplicate records, inconsistent values, and data quality issues.
-3. **Exploratory Data Analysis (EDA)** — Study feature distributions, correlations, and relationships with the target.
-4. **Feature Engineering** — Prepare relevant features and encode or transform them when necessary.
-5. **Preprocessing** — Apply suitable scaling, encoding, and imputation using a reproducible pipeline where appropriate.
-6. **Train-Test Split** — Separate training and evaluation data to estimate generalization performance.
-7. **Model Training** — Train and compare suitable machine learning algorithms.
-8. **Model Evaluation** — Evaluate the final model using metrics appropriate to regression or classification.
-9. **Model Serialization** — Save the trained model and any required preprocessing objects.
-10. **Deployment** — Load the saved artifacts in the FastAPI backend and serve predictions through the web application.
-
-### 📊 Model Evaluation
-
-The evaluation method depends on the prediction target.
-
-- **Regression:** MAE, MSE, RMSE, and \(R^2\).
-- **Classification:** Accuracy, Precision, Recall, F1-score, and a confusion matrix.
-
-Final model results should be reported using actual held-out test results rather than assumed values.
+1. 📥 **Data Loading** — Load the dataset and inspect its structure.
+2. 🧹 **Data Preprocessing** — Prepare relevant features for analysis and modeling.
+3. 📊 **Exploratory Data Analysis** — Investigate distributions, correlations, and patterns.
+4. 🧩 **Feature Preparation** — Select and transform the input features required by the model.
+5. 🧠 **Model Development** — Train and evaluate the machine learning model.
+6. 📦 **Model Persistence** — Save the trained model as `Mental_Health_Model.pkl`.
+7. ⚡ **Backend Integration** — Load the model through the FastAPI application.
+8. 🌐 **Prediction** — Accept validated user inputs and return predictions to the frontend.
+9. ☁️ **Deployment** — Deploy the application for web-based access.
 
 ## 🏗️ System Architecture
 
 ```text
-              USER
-               |
-               v
-     HTML + CSS + JavaScript
-               |
-        Fetch API / JSON
-               |
-               v
-        FastAPI Backend
-               |
-               v
-      Pydantic Validation
-               |
-               v
-    Preprocessing + ML Model
-               |
-               v
-       Predicted Score
-               |
-               v
-      JSON API Response
-               |
-               v
-      Frontend Result UI
+          👤 User
+            |
+            v
+    HTML + CSS + JavaScript
+            |
+            v
+      Fetch API / JSON
+            |
+            v
+       FastAPI Backend
+            |
+            v
+    Pydantic Validation
+            |
+            v
+      Trained ML Model
+  Mental_Health_Model.pkl
+            |
+            v
+    Predicted Score
+            |
+            v
+      JSON Response
+            |
+            v
+     Frontend Results
 ```
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
-mental-health-score-predictor/
+Bheja-Fry-AI-Score-Predictor/
 │
-├── app/
-│   ├── main.py               # FastAPI application
-│   ├── schemas.py            # Pydantic request/response models
-│   ├── model.py              # Model loading and prediction logic
-│   └── preprocessing.py      # Input preprocessing, if separated
-│
-├── models/
-│   └── model.pkl             # Trained model artifact
-│
-├── notebooks/
-│   └── eda_and_model.ipynb   # EDA, experiments, model training
-│
-├── static/
-│   ├── style.css             # Stylesheets
-│   └── script.js             # Frontend logic
-│
-├── templates/
-│   └── index.html            # Web interface
-│
-├── data/
-│   └── README.md             # Dataset details; keep large/private data out of Git
-│
-├── requirements.txt          # Python dependencies
-├── .gitignore
-└── README.md
+├── .ipynb_checkpoints/                    # Notebook checkpoints
+├── anaconda_projects/db/                  # Project data directory
+├── MHSP.ipynb                             # ML development and analysis
+├── ML Project.html                        # Exported notebook/report
+├── Mental_Health_Model.pkl                # Trained ML model
+├── Student Social Media And Mental Health Impact.csv
+│                                          # Dataset
+├── index.html                             # Web interface
+├── style.css                              # Frontend styling
+├── script.js                              # Frontend interactions
+├── main.py                                # FastAPI backend
+├── requirements.txt                       # Python dependencies
+└── README.md                              # Project documentation
 ```
 
+## 🚀 Deployment
 
-## ⚙️ Installation and Setup
+The application is deployed on **Render**.
 
-### Prerequisites
+🔗 **Live Application:** [Bheja Fry AI](https://bheja-fry-ai-score-predictor-1.onrender.com)
 
-- Python 3.10 or a compatible version supported by your dependencies
+The free tier of Render has resource and bandwidth limitations that may affect application performance and responsiveness.
+
+## 💻 Run Locally
+
+### 📋 Prerequisites
+
+- Python 3.10 or a compatible version
 - Git
 - pip
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/snape0931/Bheja-Fry-AI-Score-Predictor.git
+cd Bheja-Fry-AI-Score-Predictor
+```
+
+### 2️⃣ Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS/Linux**
+
+```bash
+source venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 4️⃣ Start the Application
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+### 5️⃣ Open in Your Browser
+
+- 🌐 **Web Interface:** http://127.0.0.1:8000
+- 📖 **Interactive API Documentation:** http://127.0.0.1:8000/docs
+
+Keep the terminal running while using the locally hosted application.
+
+### 🛠️ Troubleshooting
+
+- 📦 Verify that all required Python packages are installed.
+- 📁 Ensure `Mental_Health_Model.pkl` is available at the path expected by `main.py`.
+- 📊 Confirm that any required dataset or model files are present.
+- 🔌 Check the terminal output if the FastAPI server fails to start.
+- 🐍 Verify Python and dependency compatibility if installation errors occur.
+
+## ⚠️ Disclaimer
+
+This project is intended for **educational and machine learning demonstration purposes only**. Its predictions are dataset-based estimates and **are not medical diagnoses or a substitute for professional mental health assessment**. The output should not be used as the sole basis for health-related decisions.
+
+## 👩‍💻 Author
+
+**Saumya Srivastava**
+
+🔗 [GitHub Profile](https://github.com/snape0931)
+
+🔗 [Project Repository](https://github.com/snape0931/Bheja-Fry-AI-Score-Predictor)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
